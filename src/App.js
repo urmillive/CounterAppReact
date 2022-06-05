@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, setState, useEffect } from "react";
 import "./App.css";
 
 const App = () => {
   const [count, setCount] = useState(0);
   const alertCount = () => {
-    alert(count); 
+    alert(count);
   };
+  useEffect(() => {
+    alert("Namaste Ji");
+  }, []);
+
   return (
     <div className="App">
       <header>
@@ -27,3 +31,4 @@ const App = () => {
 };
 
 export default App;
+
